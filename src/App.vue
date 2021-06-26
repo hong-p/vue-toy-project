@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="input-container">
+      <div>
+        <InputText/>
+      </div>
+      <div>
+        <InputSearchWords/>
+      </div>
+
+    </div>
+    <div class="result-container">
+      <p>result</p>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import InputText from './components/InputText.vue'
+import InputSearchWords from './components/InputSearchWords.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputText,
+    InputSearchWords
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.input-container {
+  display: grid;
+  grid-template-columns:  50% 50%;
+}
+.result-container {
+
 }
 </style>
