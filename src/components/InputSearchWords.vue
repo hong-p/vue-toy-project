@@ -1,5 +1,9 @@
 <template>
   <div>
+    <h4>
+      검색할 단어들을 입력하세요.
+      ex) hello, world, hi
+    </h4>
     <textarea 
       ref="textArea" 
       v-model="searchWord"

@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <div>
+      <h2>
+        여러 단어를 검색할 수 있습니다.
+      </h2>
+    </div>
     <div class="input-container">
       <div>
         <InputText @changeText="getText"/>
@@ -10,7 +15,7 @@
 
     </div>
     <div class="result-container">
-      <Result
+      <SearchResult
         :text="text"
         :searchWord="searchWord"
       />
@@ -21,14 +26,14 @@
 <script>
 import InputText from './components/InputText.vue'
 import InputSearchWords from './components/InputSearchWords.vue'
-import Result from './components/Result.vue'
+import SearchResult from './components/SearchResult.vue'
 
 export default {
   name: 'App',
   components: {
     InputText,
     InputSearchWords,
-    Result
+    SearchResult
   },
   data(){
     return{

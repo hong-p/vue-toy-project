@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h4>
+      검색할 문자열을 입력하세요.
+    </h4>
     <textarea 
       ref="textArea" 
       v-model="inputText"
