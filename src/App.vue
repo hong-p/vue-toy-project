@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <h2>
-        여러 단어를 검색할 수 있습니다.
+        긴 문자열에서 여러 단어 검색하기!!
       </h2>
     </div>
     <div class="input-container">
@@ -59,13 +59,13 @@ export default {
 </script>
 
 <style>
+#app{
+  margin: 30px;
+}
 .input-container {
   display: grid;
   grid-template-columns:  50% 50%;
 }
-/* .result-container {
-
-} */
 textarea {
   resize: horizontal;
   width: 90%;

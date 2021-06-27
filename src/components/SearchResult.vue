@@ -1,14 +1,15 @@
 <template>
-  <div>
+  <div class="container">
     <div class="condition">
       <input type="radio" id="sensitive"  v-model="caseCheck" value="sensitive">
-      <label for="sensitive">대소문자 구분</label>
+      <label for="sensitive">대소문자 구분  </label>  
       <input type="radio" id="insensitive" v-model="caseCheck" value="insensitive">
       <label for="insensitive">대소문자 구분 안함</label>
     </div>
+    <h2>==== 검색 결과 ====</h2>
     <div class="result">
       <div class="total">
-        Total: <a href="#"  @click="viewAll()"> {{this.searchResults.length}}</a><br>
+        Total: <a href="#" @click="viewAll()"> {{this.searchResults.length}}</a><br>
       </div>
       <div class="o" >
         O: <a href="#" @click="viewOnelyO()">{{this.getCountO}}</a><br>
@@ -116,9 +117,16 @@
 </script>
 
 <style scoped>
+.container{
+  margin: 20px;
+}
+.condition {
+  margin-top: 10px;
+  /* margin-left: 10px; */
+}
 .result {
   font-size: 1.5rem;
   margin-left: 30px;
-  margin-top: 30px;
+  margin-top: 5px;
 }
 </style>
