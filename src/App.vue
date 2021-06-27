@@ -46,10 +46,10 @@ export default {
       this.text = text
     }
   },
-  updated() {
-    console.log(`text: ${this.text}`)
-    console.log(`searchWord: ${this.searchWord}`)
-  },
+  // updated() {
+  //   console.log(`text: ${this.text}`)
+  //   console.log(`searchWord: ${this.searchWord}`)
+  // },
 }
 </script>
 

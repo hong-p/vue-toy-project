@@ -5,7 +5,7 @@
       v-model="searchWord"
       @input="changeSearchWord"
     />
-    <p>{{searchWord}}</p>
+    <!-- <p>{{this.searchWord}}</p> -->
   </div>
 </template>
 

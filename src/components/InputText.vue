@@ -5,7 +5,7 @@
       v-model="inputText"
       @input ="changText()"
     />
-    <p>{{inputText}}</p>
+    <!-- <p>{{this.inputText}}</p> -->
   </div>
 </template>
 
