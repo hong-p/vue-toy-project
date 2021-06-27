@@ -1,6 +1,10 @@
 <template>
   <div>
-    <textarea ref="textArea" v-model="searchWord"/>
+    <textarea 
+      ref="textArea" 
+      v-model="searchWord"
+      @input="changeSearchWord"
+    />
     <p>{{searchWord}}</p>
   </div>
 </template>
@@ -12,6 +16,11 @@ import autosize from 'autosize';
     data() {
       return {
         searchWord: '',
+      }
+    },
+    methods: {
+      changeSearchWord(){
+        this.$emit('changeSearchWord', this.searchWord)
       }
     },
     updated() {

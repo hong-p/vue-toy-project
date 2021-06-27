@@ -1,6 +1,10 @@
 <template>
   <div>
-    <textarea ref="textArea" v-model="inputText"/>
+    <textarea 
+      ref="textArea" 
+      v-model="inputText"
+      @input ="changText()"
+    />
     <p>{{inputText}}</p>
   </div>
 </template>
@@ -18,7 +22,9 @@ import autosize from 'autosize';
       autosize(this.$refs.textArea)
     },
     methods: {
-
+      changText(){
+        this.$emit('changeText', this.inputText)
+      }
     }
   }
 </script>

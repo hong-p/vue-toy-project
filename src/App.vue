@@ -2,15 +2,18 @@
   <div id="app">
     <div class="input-container">
       <div>
-        <InputText/>
+        <InputText @changeText="getText"/>
       </div>
       <div>
-        <InputSearchWords/>
+        <InputSearchWords @changeSearchWord="getSearchWord"/>
       </div>
 
     </div>
     <div class="result-container">
-      <p>result</p>
+      <Result
+        :text="text"
+        :searchWord="searchWord"
+      />
     </div>
   </div>
 </template>
@@ -18,13 +21,35 @@
 <script>
 import InputText from './components/InputText.vue'
 import InputSearchWords from './components/InputSearchWords.vue'
+import Result from './components/Result.vue'
 
 export default {
   name: 'App',
   components: {
     InputText,
-    InputSearchWords
-  }
+    InputSearchWords,
+    Result
+  },
+  data(){
+    return{
+      text: '',
+      searchWord: ''
+    }
+  },
+  methods: {
+    getSearchWord(searchWord){
+      console.log('getSearchWord')
+      this.searchWord = searchWord
+    },
+    getText(text){
+      console.log('getText')
+      this.text = text
+    }
+  },
+  updated() {
+    console.log(`text: ${this.text}`)
+    console.log(`searchWord: ${this.searchWord}`)
+  },
 }
 </script>
 
