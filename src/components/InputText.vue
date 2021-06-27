@@ -1,16 +1,21 @@
 <template>
   <div>
-    <textarea v-model="inputText"/>
+    <textarea ref="textArea" v-model="inputText"/>
     <p>{{inputText}}</p>
   </div>
 </template>
 
 <script>
+import autosize from 'autosize';
+
   export default {
      data() {
         return {
             inputText: '',
         }
+    },
+    updated() {
+      autosize(this.$refs.textArea)
     },
     methods: {
 
@@ -18,8 +23,6 @@
   }
 </script>
 
-<style>
-textarea {
-  resize: none;
-}
+<style scoped>
+
 </style>

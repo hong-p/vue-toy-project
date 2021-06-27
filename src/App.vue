@@ -33,7 +33,12 @@ export default {
   display: grid;
   grid-template-columns:  50% 50%;
 }
-.result-container {
+/* .result-container {
 
+} */
+textarea {
+  resize: horizontal;
+  width: 90%;
+  height: 80px;
 }
 </style>
