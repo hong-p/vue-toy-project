@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <h2>
-        긴 문자열에서 여러 단어 검색하기!!
+        긴 문자열에서 여러 단어 존재하는지 확인하기!!
       </h2>
     </div>
     <div class="input-container">
@@ -11,14 +11,14 @@
       </div>
       <div>
         <InputSearchWords @changeSearchWord="getSearchWord"/>
+        <div class="result-container">
+          <SearchResult
+            :text="text"
+            :searchWord="searchWord"
+          />
+        </div>
       </div>
 
-    </div>
-    <div class="result-container">
-      <SearchResult
-        :text="text"
-        :searchWord="searchWord"
-      />
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4>
-      검색할 문자열을 입력하세요.
+      검색 대상 문자열을 입력하세요.
     </h4>
     <textarea 
       ref="textArea" 

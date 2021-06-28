@@ -9,9 +9,9 @@
     <h2>===== 검색 결과 =====</h2>
     <div class="result">
       <div class="total">
-        <b> Total: <a href="javascript:return false;" @click="viewAll()">{{this.searchResults.length}}</a> </b> /
-        <b> O: <a href="javascript:return false;" @click="viewOnelyO()">{{this.getCountO}}</a> </b> / 
-        <b> X: <a href="javascript:return false;" @click="viewOnelyX()">{{this.getCountX}}</a> </b>
+        <b> Total: <a href="javascript:return false;" @click="viewAll()">{{this.searchResults.length}}</a> </b> <br>
+        <b> O(있음): <a href="javascript:void(0);" @click="viewOnelyO()">{{this.getCountO}}</a> </b> <br> 
+        <b> X(없음): <a href="javascript:return false;" @click="viewOnelyX()">{{this.getCountX}}</a> </b>
       </div>
     </div>
     <ul>
